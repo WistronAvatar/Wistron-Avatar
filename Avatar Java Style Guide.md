@@ -9,7 +9,7 @@
 源碼檔名包含其最上層級類別 (top-level class) 並區分大小寫，再加上副檔名 .java。
 > Example:
 > 
-> ![](https://i.imgur.com/uGgSBuq.png)
+> ![](https://github.com/WistronAvatar/Wistron-Avatar/blob/master/images/style2_1.png)
 ### 2.2. File encoding: UTF-8<span id="tag2_2"></span>
 源碼檔的編碼格式使用 UTF-8。
 > Example:
