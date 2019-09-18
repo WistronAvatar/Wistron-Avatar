@@ -1,7 +1,3 @@
----
-slideOptions:
-  transition: slide
----
 # Avatar Java Style Guide
 本文件提供 Avatar 在使用 Java™ 程式語言撰寫原始碼時，對程式碼標準的完整定義。當一份 Java 原始檔符合這份文件規範才能被視為 Avatar 風格。
 ## 1. Introduction<span id="tag1"></span>
