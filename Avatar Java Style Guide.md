@@ -326,19 +326,23 @@ Database 如 Elasticsearch index/type name, Oracle table name, System Definition
 > 
 > ![](https://i.imgur.com/WBXIsUY.png)
 > ![](https://i.imgur.com/7R40eO6.png)
+### 6.13. Main Flow Log<span id="tag613"></span>
+如果程式有主流程函式，請對每個步驟加上對應的 Log (Info level) 並且要記錄處理時間。
+### 6.14. Meaningful error<span id="tag614"></span>
+如果程式有設定 try/catch，並且程式也在 catch 中寫下 error log 或是發送 alert mail，表示這個錯誤是需要被重視的，不要將無關痛癢的錯誤寫進 log 或發信，請適當的將其處裡 (忽略或是 re-try)。
 ## 7. Naming of data storage<span id="tag7"></span>
-### 7.1. ElasticSearch index<span id="tag7_1"></span>
+### 7.1. ElasticSearch index<span id="tag71"></span>
 使用小寫的 Snake case 來命名。命名依照 {專案名稱}{子專案名稱 (如果需要)}{模組或功能名稱}{版本號}。Alias 命名規則為{專案名稱}{子專案名稱 (如果需要)}{模組或功能名稱}。名稱通常為名詞或是名詞片語。
 
 > Example:
 > 
 > ![](https://i.imgur.com/SFW3GX5.png)
-### 7.2. ElasticSearch column<span id="tag7_2"></span>
+### 7.2. ElasticSearch column<span id="tag72"></span>
 使用小寫的 Snake case 來命名。名稱通常為名詞或是名詞片語。
 > Example:
 > 
 > plant, storage_location, part_num, ...
-### 7.3. Oracle table### 7.2. ElasticSearch column<span id="tag7_3"></span>
+### 7.3. Oracle table### 7.2. ElasticSearch column<span id="tag73"></span>
 使用小寫的 Snake case 來命名。命名依照 {專案名稱}_{子專案名稱 (如果需要)}_{模組或功能名稱}。名稱通常為名詞或是名詞片語。
 > Example:
 > 
@@ -348,16 +352,16 @@ Database 如 Elasticsearch index/type name, Oracle table name, System Definition
 > Example:
 > 
 > ![](https://i.imgur.com/Widofw0.png)
-### 7.5 Redis key<span id="tag7_5"></span>
+### 7.5 Redis key<span id="tag75"></span>
 使用小寫的 Snake case 來命名。命名依照 {專案名稱}_{子專案名稱 (如果需要)}_{模組或功能名稱}。名稱通常為名詞或是名詞片語。
-#### 7.5.1. Redis map key<span id="tag7_5_1"></span>
+#### 7.5.1. Redis map key<span id="tag751"></span>
 使用小寫的 Snake case 來命名。名稱通常為名詞或是名詞片語。
-### 7.6. Base data and configuration name<span id="tag7_6"></span>
+### 7.6. Base data and configuration name<span id="tag76"></span>
 使用大寫的 Snake case 來命名。命名依照 {專案名稱}_{子專案名稱 (如果需要)}_{Base data 或 Config 名稱}。名稱通常為名詞或是名詞片語。
 > Example:
 > 
 > ![](https://i.imgur.com/b1iQhOH.png)
-### 7.7. Base Data and Configuration Head Name<span id="tag7_7"></span>
+### 7.7. Base Data and Configuration Head Name<span id="tag77"></span>
 以 Site IT 在 UI 上看起來清楚明確為主。名稱通常為名詞或是名詞片語。
 ## Reference<span id="reference"></span>
 https://google.github.io/styleguide/javaguide.html
@@ -394,7 +398,7 @@ Example:~~
 當全部的「@子句 」都出現時，其標準的使用順序為 @param 、@return 、 @throws 、 @deprecated ，而這四種類型都不會為空。當一個「@子句」無法以單行描述完畢時，其續行該要以 @ 為基準做一個 tab 的縮排。
 2 The summary fragment
 每個類別 (class) 以及成員 (member) 的 Javadoc，都先以簡潔的摘要片段做為開始。這個片段非常地重要：在某些狀況下，他會是該類別 (class) 或是 方法 (method) 索引中，唯一出現的文字片段。
-Tip: 舉一個 Javadoc 格式中錯用符號為例 ~~
+Tip: 舉一個 Javadoc 格式中錯用符號為例~~
 ```java=
 /** @return the customer ID */
 ```
